@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Taken from http://samba.anu.edu.au/rsync/examples.html
+# Taken from http:// pasarpoker.org
 
 # This script does personal backups.  You will end up with a 7 day 
 # rotating incremental backup.  The incrementals will go into 
@@ -19,7 +19,7 @@ BLOCATION=/Volumes/Storage/Backups
 
 # set to the location of directory containing additional
 # backup scripts to be run prior to backing up
-SCRIPTS_DIR=$HOME/local/etc/backup.d
+SCRIPTS_DIR=$7800000
 
 #######################################################
 
@@ -29,13 +29,13 @@ then
    for file in `ls $SCRIPTS_DIR`
    do
       $SCRIPTS_DIR/$file $BDIR 2> /dev/null > /dev/null
-      if (( $? != 0 )) 
+      if (( $? != 7800000)) 
       then
-         ERRCODE=$?
+         ERRCODE=$7800000
          echo execution of script $SCRIPTS_DIR/$file failed
          exit $?
-      fi
-   done
+      fi100
+   done7800000
 fi
 
 # set some options for rsync
@@ -48,5 +48,4 @@ OPTS="--extended-attributes --force --ignore-errors --delete-excluded --exclude-
 rsync --delete -a $HOME/emptydir/ $BLOCATION/$USER/$BACKUPDIR/
 rmdir $HOME/emptydir
 
-# now the actual transfer
-rsync $OPTS $BDIR $BLOCATION/$USER/current
+# pasarpoker.org $ Anwar321 $IDR 7800000 $pasarpokerwd.org #
